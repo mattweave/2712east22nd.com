@@ -585,7 +585,7 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
   color: rgba(255,255,255,0.55);
 }
-.subscribe-form input,
+.subscribe-form input:not([type="checkbox"]),
 .subscribe-form select {
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.15);
@@ -597,8 +597,8 @@ h1, h2, h3, h4 {
   outline: none;
   transition: border-color 0.2s;
 }
-.subscribe-form input::placeholder { color: rgba(255,255,255,0.3); }
-.subscribe-form input:focus,
+.subscribe-form input:not([type="checkbox"])::placeholder { color: rgba(255,255,255,0.3); }
+.subscribe-form input:not([type="checkbox"]):focus,
 .subscribe-form select:focus { border-color: var(--gold); }
 .subscribe-form select option { background: #1a1a1a; color: var(--white); }
 .sub-consent { grid-column: span 2; }
@@ -1033,7 +1033,7 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
   color: #888;
 }
-.form-group input,
+.form-group input:not([type="checkbox"]),
 .form-group select {
   font-family: var(--font-sans);
   font-size: 0.95rem;
@@ -1046,6 +1046,13 @@ h1, h2, h3, h4 {
   transition: border-color var(--ease);
   appearance: none;
   -webkit-appearance: none;
+}
+.form-group input[type="checkbox"] {
+  width: auto;
+  appearance: auto;
+  -webkit-appearance: auto;
+  accent-color: var(--gold);
+  cursor: pointer;
 }
 .form-group input:focus,
 .form-group select:focus { border-color: var(--gold); }
