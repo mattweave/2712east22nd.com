@@ -486,57 +486,43 @@
   <!-- ==============================================
        CONTACT
        ============================================== -->
-  <section class="section section-dark" id="contact">
+  <section class="section section-dark subscribe-section" id="contact">
     <div class="container">
-      <div class="contact-grid">
-
-        <div class="agent-bio fade-in">
-          <div class="agent-headshot-wrap">
-            <div class="img-placeholder">agent-headshot.jpg</div>
-          </div>
-          <h3>Matt Jordan</h3>
-          <p class="agent-title">Real Estate Advisor &bull; Vortex Realty</p>
-          <div class="agent-details">
-            <span>License #773454</span>
-            <a href="tel:7572880496">757-288-0496</a>
-            <a href="mailto:matt@weavehomes.com">matt@weavehomes.com</a>
-          </div>
+      <div class="subscribe-inner fade-in">
+        <div class="subscribe-copy">
+          <p class="eyebrow">Stay in the Loop</p>
+          <h2>Follow the Build</h2>
+          <p>Get construction updates, progress photos, and first access when Unit 2 is ready for showings. No spam — just the good stuff.</p>
         </div>
-
-        <div class="fade-in delay-2">
-          <form class="contact-form" action="mailto:matt@weavehomes.com" method="post" enctype="text/plain">
-            <div class="form-group">
-              <label for="first-name">First Name</label>
-              <input type="text" id="first-name" name="first_name" placeholder="Jane" required>
-            </div>
-            <div class="form-group">
-              <label for="last-name">Last Name</label>
-              <input type="text" id="last-name" name="last_name" placeholder="Smith" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="jane@example.com" required>
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" placeholder="(512) 000-0000">
-            </div>
-            <div class="form-group span-2">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="I&apos;d love to schedule a showing..."></textarea>
-            </div>
-            <div class="form-group span-2">
-              <label class="checkbox-label">
-                <input type="checkbox" name="consent" required>
-                I agree to be contacted by Matt Jordan / Vortex Realty via call, email, and text.
-              </label>
-            </div>
-            <div class="form-group span-2">
-              <button type="submit" class="btn btn-gold">Send Message</button>
-            </div>
-          </form>
-        </div>
-
+        <form class="subscribe-form" action="https://formspree.io/f/xlgpqlnq" method="POST">
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first_name" placeholder="Jane" required>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last_name" placeholder="Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="interest">I'm interested in</label>
+            <select id="interest" name="interest">
+              <option value="updates">Construction Updates Only</option>
+              <option value="purchase">Interested in Purchasing</option>
+              <option value="both">Both</option>
+            </select>
+          </div>
+          <div class="form-group sub-consent">
+            <label class="checkbox-label">
+              <input type="checkbox" name="consent" required>
+              I agree to receive project updates from Matt Jordan / Vortex Realty.
+            </label>
+          </div>
+          <button type="submit" class="btn btn-gold">Subscribe for Updates</button>
+        </form>
       </div>
     </div>
   </section>
