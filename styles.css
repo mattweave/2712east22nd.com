@@ -509,6 +509,7 @@ h1, h2, h3, h4 {
   font-size: 2rem;
   font-weight: 300;
   margin-bottom: 4px;
+  font-variant-numeric: lining-nums;
 }
 .card-color {
   display: block;
@@ -1405,9 +1406,25 @@ h1, h2, h3, h4 {
   .nav-links { display: none; }
   .hamburger { display: flex; }
 
-  /* Hero unit — bottom left content */
+  /* Hero home — full image at natural ratio, text block below */
+  .hero-home { height: auto; min-height: unset; display: flex; flex-direction: column; }
+  .hero-home .hero-media { position: relative; height: auto; flex-shrink: 0; }
+  .hero-home .hero-img { height: auto; object-fit: unset; }
+  .hero-home .hero-overlay {
+    position: relative;
+    inset: auto;
+    background: var(--dark);
+    padding: 44px 24px;
+    justify-content: center;
+  }
+
+  /* Hero unit pages */
+  .hero-unit { height: 65vh; min-height: 420px; }
   .hero-unit .hero-overlay { padding: 32px 24px; }
+
+  /* Hero CTA buttons */
   .hero-cta-group { flex-direction: column; align-items: center; }
+  .hero-cta-group .btn { width: 100%; max-width: 280px; text-align: center; }
 
   /* Cards */
   .cards-grid { grid-template-columns: 1fr; gap: 24px; }
@@ -1422,6 +1439,10 @@ h1, h2, h3, h4 {
     grid-column: span 1;
     grid-row: span 1;
   }
+
+  /* Subscribe form — stack and full-width inputs */
+  .subscribe-form input:not([type="checkbox"]),
+  .subscribe-form select { width: 100%; }
 
   /* Flex suite */
   .flex-cols { grid-template-columns: 1fr; gap: 32px; }
@@ -1441,6 +1462,10 @@ h1, h2, h3, h4 {
   /* Lightbox nav */
   .lightbox-prev { left: -6px; }
   .lightbox-next { right: -6px; }
+
+  /* Footer */
+  .footer-nav { gap: 16px; }
+  .site-footer { padding: 36px 0; }
 }
 
 
@@ -1450,13 +1475,22 @@ h1, h2, h3, h4 {
 @media (max-width: 480px) {
   :root { --gutter: 16px; }
 
+  .hero-unit { height: 60vh; min-height: 360px; }
+
   .hero-content h1 { font-size: 2.6rem; }
+  .hero-content .eyebrow { font-size: 0.72rem; }
+  .hero-sub { font-size: 0.88rem; }
   .hero-unit-content h1 { font-size: 2.4rem; }
 
-  .gallery-grid { grid-auto-rows: 200px; }
+  .gallery-grid { grid-auto-rows: 150px; }
 
   .tabs-nav { overflow-x: auto; flex-wrap: nowrap; }
   .tab-btn { padding: 14px 18px; }
 
   .subnav-inner a { padding: 15px 14px; font-size: 0.65rem; }
+
+  .card-body { padding: 24px; }
+  .card-body h3 { font-size: 1.7rem; }
+
+  .btn { padding: 14px 24px; font-size: 0.7rem; }
 }
